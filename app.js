@@ -23,3 +23,9 @@ Person.prototype.borrowBook = function(book){
       console.log('book-taken')
     }
 }
+
+//Teacher Constructor
+function Teacher(name, age){
+  Person.call(this, name, age)
+}
+Teacher.prototype = Object.create(Person.prototype);
