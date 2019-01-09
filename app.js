@@ -29,3 +29,10 @@ function Teacher(name, age){
   Person.call(this, name, age)
 }
 Teacher.prototype = Object.create(Person.prototype);
+
+//Student Constructor
+function Student(name, age, status){
+  Person.call(this, name, age);
+  this.status = status;
+}
+Student.prototype = Object.create(Person.prototype);
