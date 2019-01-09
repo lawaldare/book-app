@@ -5,9 +5,8 @@ let library = [];
 function Library(title) {
   this.title = title;
   library.push(this.title);
-  //return library;
+  return library;
 }
-
 
 //Person contructor
 function Person(name, age){
