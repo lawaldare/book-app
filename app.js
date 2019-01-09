@@ -36,3 +36,10 @@ function Student(name, age, status){
   this.status = status;
 }
 Student.prototype = Object.create(Person.prototype);
+
+//checking if the book is available
+function checkAvailability(book){
+  return (library.includes(book)) ? true : false;
+}
+
+
