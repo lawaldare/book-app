@@ -42,4 +42,11 @@ function checkAvailability(book){
   return (library.includes(book)) ? true : false;
 }
 
-
+//removing the book from library
+function arrayRemove(array, element) {
+  const index = array.indexOf(element);
+  if (index !== -1) {
+    array.splice(index, 1);
+    return array;
+  }
+}
