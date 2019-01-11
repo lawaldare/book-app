@@ -1,13 +1,13 @@
-const Library = require('./app.js');
+const Admin = require('./app.js');
 const Person = require('./app.js');
 const Teacher = require('./app.js');
 const Student = require('./app.js');
 
 
-//Testing the Library Contsructor
+//Testing the Admin Contsructor
 test('works', () => {
-  const book = new Library('item-1');
-  expect(book.title).toBe('item-1');
+  const admin1 = new Admin('Moses');
+  expect(admin1.name).toBe('Moses');
 });
 
 

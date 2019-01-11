@@ -1,71 +1,105 @@
-let library = ['item-1', 'item-2', 'item-3', 'item-4'];
+//Library
+let library = [];
 
-let statusBankArray = [];
-let books;
+let teacherArray = [];
+let juniorArray = [];
+let seniorArray = [];
 
-//Person contructor
-function Person(name, status){
+function Person(name){
   this.name = name;
-  this.status = status;
-  this.hasRequested = false;
+  this.hasOrderBook = false;
 }
 
-Person.prototype.bookRequest = function(book){
-    let statusBank = {}; 
-    statusBank.status = this.status;
-    statusBank.book = book;
-    statusBankArray.push(statusBank);
-    this.hasRequested = true;
+Person.prototype.requestBook = function(book){
+  let teacherObj = {}, juniorObj = {}, seniorObj = {};
+    if(this.status === 'teacher'){
+      teacherObj.book = book;
+      teacherObj.name = this.name;
+      teacherObj.collected = false;
+      teacherArray.push(teacherObj);
+    } else if(this.status === 'senior'){
+      seniorObj.book = book;
+      seniorObj.name = this.name;
+      seniorObj.collected = false;
+      seniorArray.push(seniorObj);
+    } else { 
+      juniorObj.book = book;
+      juniorObj.name = this.name;
+      juniorObj.collected = false;
+      juniorArray.push(juniorObj);
+    }
+    this.hasOrderBook = true;
 }
-
-// //Student Constructor
-// function Student(name, status){
-//   Person.call(this, name, status);
-//   this.status = status;
-// }
-// Student.prototype = Object.create(Person.prototype);
-
-// //Teacher Constructor
-// function Teacher(name, status){
-//   Person.call(this, name, status);
-//   this.status = 'teacher';
-// }
-// Teacher.prototype = Object.create(Person.prototype);
-
-
 
 //Admin Constructor
 function Admin(name){
-  this.name = name;
-}
-Admin.prototype.grantBook = function(book){
-  console.log(book)
-    if(checkAvailability(book)) {
-      console.log(book)
-        for(let data of statusBankArray){
-          console.log(data)
-          if(data.status === 'teacher') {
-            let item = data.book;
-            //this.books.push(item);
-            library = arrayRemove(library, item);
-            return library;
-          } else if(data.status === 'seniorS'){
-            let item = data.book;
-            //this.books.push(item);
-            library = arrayRemove(library, item);
-            return library;
-           } else {
-              let item = data.book;
-              //this.books.push(item);
-              library = arrayRemove(library, item);
-              return library;
-            }
-        }  
-    }else {
-      return 'book-taken';
+  Person.call(this, name);
+} 
+
+Admin.prototype.grantBook = function(){
+  if(teacherArray.length > 0){
+    for(user of teacherArray){
+        if(checkAvailability(user.book)){
+          library = arrayRemove(library, user.book);
+          user.collected = true;
+          return library;
+        } 
+         continue;
     }
-  //} 
+  } else {
+    console.log('book taken');
+  }   
+     
+  if(seniorArray.length > 0){  
+    for(user of seniorArray){
+        if(checkAvailability(user.book)){
+          library = arrayRemove(library, user.book);
+          user.collected = true;
+          return library;
+        } 
+        continue;
+    } 
+  } else {
+    console.log('book taken');
+    }
+  
+  if (juniorArray.length > 0){ 
+    for(user of juniorArray){
+        if(checkAvailability(user.book)){
+          library = arrayRemove(library, user.book);
+          user.collected = true;
+          return library;
+        } 
+      continue;
+    }
+  } else {
+    console.log('book taken');
+  }  
 }
+
+Admin.prototype.add = function(book){
+  library.push(book);
+  return library;
+}
+
+Person.prototype.returnBook = function(book){
+        library.push(book);
+        this.hasOrderBook = false;
+}
+
+//Teacher Constructor
+function Teacher(name, status){
+  Person.call(this, name, status)
+  this.status = 'teacher';
+}
+Teacher.prototype = Object.create(Person.prototype);
+
+//Student Constructor
+function Student(name, status){
+  Person.call(this, name, status);
+  this.status = status;
+}
+Student.prototype = Object.create(Person.prototype);
 
 //checking if the book is available
 function checkAvailability(book){
@@ -81,35 +115,36 @@ function arrayRemove(array, element) {
   }
 }
 
+const admin1 = new Admin('Johnson');
+const student1 = new Student('Moses', 'senior');
+const student3 = new Student('John', 'senior');
+const student2 = new Student('Kazeem', 'junior');
+const teacher1 = new Teacher('Salah');
 
-let student1 = new Person('Stanley', 'juniorS');
-let student2 = new Person('Kazeem', 'seniorS');
-let admin1 = new Admin('Adam');
-let teacher1 = new Person('Moses', 'teacher');
+student1.requestBook('item-1');
+student2.requestBook('item-2');
+student3.requestBook('item-4');
+teacher1.requestBook('item-3');
 
-//teacher1.bookRequest('item-2');
-student1.bookRequest('item-3');
-//student2.bookRequest('item-4');
-//console.log(teacher1);
-//console.log(student2);
-//admin1.grantBook('item-3');
-admin1.grantBook('item-3');
-//admin1.grantBook('item-2');
+// console.log(juniorArray)
+// console.log(seniorArray)
+// console.log(teacherArray);
 
-console.log(library);
-console.log(student2);
-//console.log(teacher1)
+admin1.grantBook();
+admin1.grantBook();
+admin1.grantBook();
+admin1.grantBook();
+// admin1.grantBook();
 
+console.log(seniorArray)
+console.log(juniorArray)
+console.log(teacherArray);
 
-
-console.log(statusBankArray)
-
+//student1.returnBook('item-1');
 
 
 
+console.log(library)
 
-
-//console.log(library);
-
-//console.log(teacher1.hasCollected)
-//console.log(student1.hasCollected)
+console.log(seniorArray);
+console.log(student1)
