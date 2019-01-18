@@ -1,11 +1,11 @@
-const Librarian = require('./Library');
+const Libarian = require('./Library');
 const library = require('../Store/Store');
 const Student = require('../Person/Student/JuniorStudent/JuniorStudent');
 const Store = require('../Store/Store');
 const returnArray = require('../Store/returnArray');
 const borrowedBook = require('../Store/borrowedBook');
 
-const admin = new Librarian('Adamu');
+const admin = new Libarian('Adamu');
 
 test('creating an instance of the Librarian constructor', () => {
   expect(admin.name).toBe('Adamu');
@@ -29,8 +29,13 @@ test('admin granting a book that is available', () => {
     'userID': 12565 }]);
 });
 
-std2.return('item-2', 'Johnson', 12565);
+
 
 test('admin accepting a book', () => {
-  expect(admin.acceptBook()).toBeUndefined();
+  std2.return('item-2', 'Johnson', 12565);
+  admin.acceptBook();
+  let a = library.find(function(book){
+    return book['title'] === 'item-2'; 
+  })
+    expect(a.quantity).toBe(1);
 });
