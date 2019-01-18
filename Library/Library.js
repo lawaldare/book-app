@@ -12,7 +12,6 @@ function Libarian(name){
 
 //grantRequest method
 Libarian.prototype.grantRequest = function(){
- //let requestArray = requestArray.sort(function(a, b){ return a['priority'] - b['priority']});
   for(let book of library){
     if((requestArray[0].title === book.title) && (book.quantity >= 1) && (requestArray[0].author === book.author)){
       book.userID = requestArray[0].idN;
