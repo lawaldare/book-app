@@ -30,7 +30,7 @@ Libarian.prototype.acceptBook = function(){
       if((book.title === bookie.title) && (book.author === book.author)){
         book.quantity = book.quantity + 1;
         returnArray.splice(0, 1);
-        return returnArray;
+        return book.quantity;
       } 
     }  
   }
