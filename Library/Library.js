@@ -4,12 +4,15 @@ const library = require('../Store/Store');
 const juniorStudent = require('../Person/Student/JuniorStudent/JuniorStudent');
 const returnArray = require('../Store/returnArray');
 
-
+//Libarian Constructor
 function Libarian(name){
   this.name = name;
 }
 
+
+//grantRequest method
 Libarian.prototype.grantRequest = function(){
+ //let requestArray = requestArray.sort(function(a, b){ return a['priority'] - b['priority']});
   for(let book of library){
     if((requestArray[0].title === book.title) && (book.quantity >= 1) && (requestArray[0].author === book.author)){
       book.userID = requestArray[0].idN;
@@ -24,6 +27,8 @@ Libarian.prototype.grantRequest = function(){
   }
 }
 
+
+//acceptBook method
 Libarian.prototype.acceptBook = function(){
   for(let book of returnArray){
     for(let bookie of library){
@@ -35,28 +40,6 @@ Libarian.prototype.acceptBook = function(){
     }  
   }
 } 
-
-
-
-// let lb = new Libarian('Ekene');
-
-// lb.grantRequest();
-
-// console.log(requestArray)
-
-//lb.acceptBook();
-
-//console.log(library);
-
-
- //console.log(library);
-//console.log(borrowedBook);
-
-//console.log(borrowedBook);
-
- //console.log(returnArray);
-// console.log(library);
-
 
 
 
