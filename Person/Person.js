@@ -21,9 +21,7 @@ Person.prototype.return = function(title, author, userID){
       returnArray.push(book);
       borrowedBook.splice((borrowedBook.indexOf(book)), 1);
       return returnArray;
-     } else {
-       return `bullshit`;
-     }
+     } 
   }
 }
 

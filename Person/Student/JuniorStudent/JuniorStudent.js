@@ -9,6 +9,8 @@ function Student(name, idN, priority){
 }
 
 
+
+
 Student.prototype = Object.create(Person.prototype);
 
 
