@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1547807580408" clover="3.2.0">
-  <project timestamp="1547807580409" name="All files">
-    <metrics statements="67" coveredstatements="67" conditionals="18" coveredconditionals="17" methods="10" coveredmethods="9" elements="95" coveredelements="93" complexity="0" loc="67" ncloc="67" packages="6" files="9" classes="9">
+<coverage generated="1547816912319" clover="3.2.0">
+  <project timestamp="1547816912320" name="All files">
+    <metrics statements="68" coveredstatements="68" conditionals="18" coveredconditionals="17" methods="10" coveredmethods="9" elements="96" coveredelements="94" complexity="0" loc="68" ncloc="68" packages="6" files="9" classes="9">
       <package name="Library">
         <metrics statements="25" coveredstatements="25" conditionals="13" coveredconditionals="13" methods="3" coveredmethods="3"/>
         <file name="Library.js" path="C:\Users\OLUWADAMILARE\Desktop\BookApp\Library\Library.js">
@@ -12,48 +12,49 @@
           <line num="4" count="2" type="stmt"/>
           <line num="5" count="2" type="stmt"/>
           <line num="9" count="2" type="stmt"/>
-          <line num="12" count="2" type="stmt"/>
-          <line num="13" count="4" type="stmt"/>
-          <line num="14" count="6" type="cond" truecount="5" falsecount="0"/>
-          <line num="15" count="2" type="stmt"/>
-          <line num="16" count="2" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="16" count="4" type="stmt"/>
+          <line num="17" count="6" type="cond" truecount="5" falsecount="0"/>
           <line num="18" count="2" type="stmt"/>
           <line num="19" count="2" type="stmt"/>
-          <line num="20" count="4" type="cond" truecount="4" falsecount="0"/>
+          <line num="20" count="2" type="stmt"/>
           <line num="21" count="2" type="stmt"/>
           <line num="22" count="2" type="stmt"/>
-          <line num="27" count="2" type="stmt"/>
-          <line num="28" count="1" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
-          <line num="30" count="2" type="cond" truecount="4" falsecount="0"/>
-          <line num="31" count="1" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
+          <line num="23" count="4" type="cond" truecount="4" falsecount="0"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
           <line num="33" count="1" type="stmt"/>
-          <line num="65" count="2" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="2" type="cond" truecount="4" falsecount="0"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="48" count="2" type="stmt"/>
         </file>
       </package>
       <package name="Person">
-        <metrics statements="17" coveredstatements="17" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <metrics statements="18" coveredstatements="18" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <file name="Person.js" path="C:\Users\OLUWADAMILARE\Desktop\BookApp\Person\Person.js">
-          <metrics statements="17" coveredstatements="17" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+          <metrics statements="18" coveredstatements="18" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
           <line num="1" count="5" type="stmt"/>
           <line num="2" count="5" type="stmt"/>
           <line num="3" count="5" type="stmt"/>
-          <line num="6" count="6" type="stmt"/>
-          <line num="7" count="6" type="stmt"/>
           <line num="8" count="6" type="stmt"/>
-          <line num="11" count="5" type="stmt"/>
-          <line num="12" count="8" type="stmt"/>
-          <line num="13" count="8" type="stmt"/>
-          <line num="14" count="8" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
+          <line num="14" count="5" type="stmt"/>
           <line num="15" count="8" type="stmt"/>
-          <line num="18" count="5" type="stmt"/>
-          <line num="19" count="2" type="stmt"/>
-          <line num="20" count="2" type="cond" truecount="4" falsecount="1"/>
-          <line num="22" count="2" type="stmt"/>
+          <line num="16" count="8" type="stmt"/>
+          <line num="17" count="8" type="stmt"/>
+          <line num="18" count="8" type="stmt"/>
+          <line num="22" count="5" type="stmt"/>
           <line num="23" count="2" type="stmt"/>
-          <line num="32" count="5" type="stmt"/>
+          <line num="24" count="2" type="cond" truecount="4" falsecount="1"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="35" count="5" type="stmt"/>
         </file>
       </package>
       <package name="Person.Student.JuniorStudent">
@@ -64,9 +65,9 @@
           <line num="2" count="3" type="stmt"/>
           <line num="3" count="3" type="stmt"/>
           <line num="4" count="3" type="stmt"/>
-          <line num="8" count="3" type="stmt"/>
-          <line num="12" count="3" type="stmt"/>
-          <line num="33" count="3" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="15" count="3" type="stmt"/>
+          <line num="19" count="3" type="stmt"/>
         </file>
       </package>
       <package name="Person.Student.SeniorStudent">
@@ -74,9 +75,9 @@
         <file name="SeniorStudent.js" path="C:\Users\OLUWADAMILARE\Desktop\BookApp\Person\Student\SeniorStudent\SeniorStudent.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="1" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
         </file>
       </package>
       <package name="Person.Teacher">
@@ -85,9 +86,9 @@
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="1" count="1" type="stmt"/>
           <line num="2" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
         </file>
       </package>
       <package name="Store">
